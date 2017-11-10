@@ -33,3 +33,26 @@ draw()   // excuted repeatedly
 -- Module 3 Programming Assignment Walkthrough
     
     With GUI coding, do not hesitate to use javadoc
+    
+    
+-- Week 4
+
+base/super class VS derived/sub class
+
+Private vars can be accessed only through public methods
+
+Person p = new Student(); // since a student "is-a" person
+
+Rule of thumb: Make member variables private (And methods either public or private)
+
+protected : can access from same class
+            can access from same package 
+            can access from any subclass
+            
+package :  can access from same package
+
+NEW Rule of thumb: always use either public or private
+
+"new" means create memory space, and it's an operator
+
+Objects are created "inside out" : Indirect Superclass -> superclass -> subclass
