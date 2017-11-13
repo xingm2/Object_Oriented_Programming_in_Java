@@ -37,6 +37,7 @@ draw()   // excuted repeatedly
     
 -- Week 4
 
+
 base/super class VS derived/sub class
 
 Private vars can be accessed only through public methods
@@ -56,3 +57,19 @@ NEW Rule of thumb: always use either public or private
 "new" means create memory space, and it's an operator
 
 Objects are created "inside out" : Indirect Superclass -> superclass -> subclass
+
+--- Compiler Rules
+1. No superclass? Compiler inserts: extends Object
+2. No constructor? Java gives you one for you.
+3. 1st Line of a constructor must be either: this(args) or super(args); otherwise, Java inserts: "super();" (means it's gonna insert a call to the default constructor of your super class)
+
+--- Project
+1. figure out class hierarchy.
+2. predict
+3. identify changes
+4. IsLand method -> IsInCountry
+5. printQuakes: all the eq in each country, use "country" property in the earthquakes
+6. test
+7. UML,look into EarthquakeMarker -> SimplePointMarker -> Marker
+8. complete the method definition for draw()
+9. drawEarthquake() and LandQuakeMarker()
