@@ -63,6 +63,36 @@ Objects are created "inside out" : Indirect Superclass -> superclass -> subclass
 2. No constructor? Java gives you one for you.
 3. 1st Line of a constructor must be either: this(args) or super(args); otherwise, Java inserts: "super();" (means it's gonna insert a call to the default constructor of your super class)
 
+--- Overloading vs Overriding
+Overloading: same class has same method name with different parameters
+Overriding: subclass has same method name with the same parameters as the superclass
+
+Println automatically calls toString if you pass an object as a parameter to print line.
+
+--- Polymorphism
+---- compile time and runtime
+step 1. Compiler interprets code
+step 2. runtime environment executes interpreted code
+---- compile time rules
+1. compiler only knows reference type
+2. can only look in reference type class for method
+3. outputs a method signature
+---- run time rules
+1. follow exact runtime type of object to find method
+2. must match compile time method signature to appropriate method in actual object's class
+---- Casting
+Use casting of objects to aid the compiler
+Subclass ref = (Subclass) superRef;
+---- Runtime type check
+instanceof 
+
+---- Interfaces
+Interfaces only define required methods
+Classes can inherit from multiple interfaces
+Abstract class or interface?
+1. if you just want to define a required method: Interface
+2. if you want to define potentially required methods AND commen behavior: abstract class
+
 --- Project
 1. figure out class hierarchy.
 2. predict
@@ -73,3 +103,5 @@ Objects are created "inside out" : Indirect Superclass -> superclass -> subclass
 7. UML,look into EarthquakeMarker -> SimplePointMarker -> Marker
 8. complete the method definition for draw()
 9. drawEarthquake() and LandQuakeMarker()
+
+
