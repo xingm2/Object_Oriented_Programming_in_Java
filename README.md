@@ -126,4 +126,8 @@ Abstract class or interface?
 8. complete the method definition for draw()
 9. drawEarthquake() and LandQuakeMarker()
 
+-- Week 5
+MapUtils.createDefaultEventDispatcher(this, map); // make our map interactive
 
+PApplet implements (MouseListener and KeyListener)
+UnfoldingMap implements EventListener
