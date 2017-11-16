@@ -19,7 +19,12 @@ draw()   // excuted repeatedly
     map.draw will go through all the objects that are associated with our attached to our map object and will refresh them as well.
 
 -- ArrayLists and Generics
-
+List<Feature> countries = new ArrayList<Feature>();
+List is an Abstract data type, interface
+ArrayList is actual java class implements list behaviors
+To have a interface as the type of the variable, and the actual class as the type of the thing you instantiated
+   
+ArrayList is in java.util
     Array vs ArrayLists
     
     countryArray[0] = f;
@@ -80,9 +85,26 @@ step 2. runtime environment executes interpreted code
 ---- run time rules
 1. follow exact runtime type of object to find method
 2. must match compile time method signature to appropriate method in actual object's class
+
+
 ---- Casting
+
+Automatic type promotion (like int to double)
+Superclass ref = new Subclass(); //widening
+
 Use casting of objects to aid the compiler
-Subclass ref = (Subclass) superRef;
+Explicit casting (like double to int)
+Subclass ref = (Subclass) superRef;  // narrowing
+
+Person s = new Student("Cara",1234); // person dont have this method 'getSID', but student has this
+s.getSID();
+Compile Time Error!
+((Student)s ).getSID(); // Works fine this time!
+
+Person s = new Person("Tim"); // person dont have this method 'getSID'
+((Student)s ).getSID();
+Runtime Error! Java.lang.ClassCastException: From Person to Student
+
 ---- Runtime type check
 instanceof 
 
