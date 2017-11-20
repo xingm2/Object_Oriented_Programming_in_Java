@@ -51,6 +51,7 @@ Person p = new Student(); // since a student "is-a" person
 
 Rule of thumb: Make member variables private (And methods either public or private)
 
+
 protected : can access from same class
             can access from same package 
             can access from any subclass
@@ -131,3 +132,31 @@ MapUtils.createDefaultEventDispatcher(this, map); // make our map interactive
 
 PApplet implements (MouseListener and KeyListener)
 UnfoldingMap implements EventListener
+
+-- Week 6
+
+--- Linear Search
+
+// toFind is a city name
+Start at the 1st i in the array
+while i is less than the length of the arrary:
+    if the city to find equals the city at the current index,
+        return the airport code
+    increment index by 1
+return a value to indicate the airport was not found
+
+public static String findAirportCode(String toFind, Airport[] airports) {
+    int index = 0;
+    while (index < airports.length){
+        Airport a = airports[index];
+        if (toFind.equals(a.getCity())){
+            return a.getCode();
+        }
+        index++;
+    }
+    return null;
+}
+
+--- Binary Search
+
+List must be sorted on what you are searching
