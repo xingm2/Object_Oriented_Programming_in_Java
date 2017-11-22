@@ -160,3 +160,10 @@ public static String findAirportCode(String toFind, Airport[] airports) {
 --- Binary Search
 
 List must be sorted on what you are searching
+
+--- Comparable Interface
+import java.util.*;
+Collections.sort(numsToSort); //merge sort 
+
+public class Airport implements Comparable<Airport>  //We're specifying what kind of objects we're going to know how to compare, and this is using generics.
+public int compareTo (Airport other)  //"Comparable" as an interface says that you must implements "compareTo" method
